@@ -1,4 +1,7 @@
-<section class="banner-principal">
+<section class="banner-container">
+        <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>img/bg-form.jpg')"></div>
+        <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>img/bg-form2.jpg')"></div>
+        <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>img/bg-form3.jpg')"></div>
         <div class="overlay"></div>
         <div class="center">
             <form action="">

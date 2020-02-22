@@ -69,6 +69,8 @@
 
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
+
     <?php
     if ($url == 'contato') {
     ?>
