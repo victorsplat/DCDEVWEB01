@@ -13,3 +13,8 @@ $(() => {
         }
     })
 })
+
+if ($('target').lenght > 0) {
+    const target = '#' + $('target').attr('target');
+    alert(target);
+}

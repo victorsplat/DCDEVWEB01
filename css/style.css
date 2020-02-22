@@ -294,6 +294,62 @@ section.error-404 a:hover {
     text-decoration: underline;
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+    ;
+}
+
+.contato-title {
+    font-size: 30px;
+    font-weight: 400;
+    color: #999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contato-container {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contato-container form input[type="text"] {
+    margin: 8px 0;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #CCC;
+    padding-left: 8px;
+    font-size: 16px;
+    max-width: 600px;
+    color: #444;
+}
+
+.contato-container form textarea {
+    padding: 8px;
+    margin: 8px 0;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #CCC;
+    padding-left: 8px;
+    font-size: 16px;
+    max-width: 600px;
+    color: #444;
+    resize: vertical;
+}
+
+.contato-container form input[type="submit"] {
+    font-size: 20px;
+    width: 90%;
+    max-width: 650px;
+    background-color: #313462;
+    color: #EEE;
+    padding: 10px;
+    -webkit-box-shadow: 6px 8px 19px -5px rgba(148, 148, 148, 0.75);
+    -moz-box-shadow: 6px 8px 19px -5px rgba(148, 148, 148, 0.75);
+    box-shadow: 6px 8px 19px -5px rgba(148, 148, 148, 0.75);
+    cursor: pointer;
+}
+
 @media screen and (max-width:768px) {
     img {
         float: none !important;
@@ -350,5 +406,9 @@ section.error-404 a:hover {
         display: block;
         color: #444;
         text-decoration: none;
+    }
+    .contato-container form textarea,
+    .contato-container form input {
+        width: 80%;
     }
 }
