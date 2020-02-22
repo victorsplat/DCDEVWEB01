@@ -14,7 +14,8 @@ $(() => {
     })
 })
 
-if ($('target').lenght > 0) {
+if ($('target').length > 0) {
     const target = '#' + $('target').attr('target');
-    alert(target);
+    const divScroll = $(target).offset().top;
+    $('html,body').animate({ 'scrollTop': divScroll, }, 1200)
 }

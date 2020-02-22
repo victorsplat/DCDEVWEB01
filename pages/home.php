@@ -8,7 +8,7 @@
             </form>
         </div>
     </section>
-    <section class="descricao-autor">
+    <section id="sobre" class="descricao-autor">
         <div class="center">
             <div class="w50 left">
                 <h2>Guilherme C. Grillo</h2>
@@ -54,7 +54,7 @@
 
     <section class="extras">
         <div class="center">
-            <div class="w50 left depoimentos-container">
+            <div id="depoimentos" class="w50 left depoimentos-container">
                 <h2 class="title">Depoimentos dos nossos Clientes:</h2>
                 <div class="depoimentos-single">
                     <p class="depoimento-descricao">Amet Lorem cillum amet aute ea qui deserunt excepteur elit fugiat et veniam. Ullamco nisi adipisicing laborum eu esse in. Duis labore in fugiat eiusmod voluptate duis est eu veniam ea.</p>
@@ -69,7 +69,7 @@
                     <p class="nome-autor">Lorem Ipsum</p>
                 </div>
             </div>
-            <div class="w50 left servicos-container">
+            <div id="servicos"class="w50 left servicos-container">
                 <h2 class="title">Serviços</h2>
                 <div class="servicos">
                     <ul>
