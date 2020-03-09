@@ -13,6 +13,10 @@
 </head>
 
 <body>
+
+    <base base="<?php echo INCLUDE_PATH; ?>">
+
+    <!-- Create a target to manipulate scrolls. -->
     <?php
     $url = isset($_GET['url']) ? $_GET['url'] : 'home';
     switch ($url) {
@@ -24,59 +28,36 @@
             break;
     }
     ?>
-    <header>
-        <div class="center">
-            <div class="left logo"><a href="<?php echo INCLUDE_PATH; ?>">Logomarca</a></div>
-            <nav class="right desktop">
-                <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
-                </ul>
-            </nav>
-            <nav class="right mobile">
-                <div class="mobile-menu-button">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-                <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="clear"></div>
-        </div>
-    </header>
-    <?php
-    if (file_exists('pages/' . $url . '.php')) {
-        include('pages/' . $url . '.php');
-    } else {
-        if ($url != 'servicos' && $url != 'sobre') {
-            $erro404 = true;
-            include('pages/404.php');
-        } else{
-            include('pages/home.php');
+
+    <!--Invoke the header to the page -->
+    <?php require('pages/header.php');  ?>
+
+    <!--Dinamically create the page content or redrirect to 404 page. -->
+    <div class="main-content">
+        <?php
+        if (file_exists('pages/' . $url . '.php')) {
+            include('pages/' . $url . '.php');
+        } else {
+            if ($url != 'servicos' && $url != 'sobre') {
+                $erro404 = true;
+                include('pages/404.php');
+            } else {
+                include('pages/home.php');
+            }
         }
-    }
-    ?>
-    <footer <?php if (isset($erro404) && $erro404 == true) echo 'class="footer-404"' ?>>
-        <div class="center">
-            <p>Todos os Direitos Reservados</p>
-        </div>
-    </footer>
+        ?>
+    </div>
+
+    <!-- Invoke the footer to the page -->
+    <?php require('pages/footer.php'); ?>
 
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/enviroment.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
 
-    <?php
-    if ($url == 'contato') {
-    ?>
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
-        <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
-    <?php } ?>
 </body>
 
 </html>
